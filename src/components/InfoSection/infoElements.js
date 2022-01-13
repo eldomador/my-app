@@ -98,7 +98,7 @@ export const Img = styled.img`
   padding-right: 0;
 
   @media screen and (max-width: 800px) {
-    max-height: 200px;
+    max-height: 150px;
   }
 `;
 
