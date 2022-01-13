@@ -5,16 +5,11 @@ export const InfoContainer = styled.div`
   height: 100vh;
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
-
-  @media screen and (max-width: 580px) {
-    padding: 100px 0;
-  }
 `;
 
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -24,6 +19,7 @@ export const InfoWrapper = styled.div`
 `;
 
 export const InfoRow = styled.div`
+  margin-top: 100px;
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
@@ -96,9 +92,14 @@ export const ImgWrap = styled.div`
 `;
 
 export const Img = styled.img`
+  height: auto;
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+
+  @media screen and (max-width: 800px) {
+    max-height: 200px;
+  }
 `;
 
 export const PlayerWrap = styled.div`
