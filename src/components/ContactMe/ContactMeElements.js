@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 100vh;
 
   @media screen and (max-height: 768px) {
-    height: 900px;
+    height: 800px;
   }
   /* background: #01bf71;
   height: 100vh;
@@ -32,6 +32,7 @@ export const FormWrap = styled.div`
 
   @media screen and (max-height: 768px) {
     height: 580px;
+    margin-top: 50px;
   }
 `;
 
