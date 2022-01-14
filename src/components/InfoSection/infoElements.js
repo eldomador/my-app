@@ -2,14 +2,18 @@ import styled from "styled-components";
 import ReactPlayer from "react-player";
 
 export const InfoContainer = styled.div`
-  height: 100vh;
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
+
+  @media screen and (max-width: 768px) {
+    padding: 100px 0;
+  }
 `;
 
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
+  height: 860px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -26,10 +30,10 @@ export const InfoRow = styled.div`
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
-  @media screen and (max-width: 580px) {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-areas: ${({ imgStart }) =>
+      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
   }
 `;
 
@@ -96,10 +100,6 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
-
-  @media screen and (max-width: 800px) {
-    max-height: 150px;
-  }
 `;
 
 export const PlayerWrap = styled.div`

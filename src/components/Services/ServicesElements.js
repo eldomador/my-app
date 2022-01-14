@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const ServicesContainer = styled.div`
-  height: 100vh;
+  height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +8,10 @@ export const ServicesContainer = styled.div`
   background: #010606;
 
   @media screen and (max-width: 768px) {
+    height: 1100px;
+  }
+
+  @media screen and (max-width: 480px) {
     height: 1300px;
   }
 `;
@@ -21,9 +25,9 @@ export const ServicesWrapper = styled.div`
   grid-gap: 16px;
   padding: 0 50px;
 
-  /* @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
-  } */
+  }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -31,7 +35,7 @@ export const ServicesWrapper = styled.div`
   }
 `;
 
-export const ServicesCard = styled.div`
+export const ServicesCard = styled.a`
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -43,11 +47,17 @@ export const ServicesCard = styled.div`
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
 
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+  }
+
+  &:visited {
+    text-decoration: none;
+    color: inherit;
   }
 `;
 
@@ -59,10 +69,11 @@ export const ServicesIcon = styled.img`
 
 export const ServicesH1 = styled.h1`
   font-size: 2.5rem;
+
+  margin-bottom: 10px;
   color: #fff;
 
   @media screen and (max-width: 768px) {
-    margin-top: 60px;
     font-size: 2rem;
   }
 `;
@@ -77,22 +88,22 @@ export const ServicesP = styled.p`
   text-align: center;
 `;
 
-export const ServicesLink = styled.a`
-  border-radius: 50px;
-  background: #010606;
-  white-space: nowrap;
-  padding: 10px 64px;
-  margin-top: 10px;
-  color: #fff;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2 ease-in-out;
-  text-decoration: none;
+// export const ServicesLink = styled.a`
+//   border-radius: 50px;
+//   background: #010606;
+//   white-space: nowrap;
+//   padding: 10px 64px;
+//   margin-top: 10px;
+//   color: #fff;
+//   font-size: 16px;
+//   outline: none;
+//   border: none;
+//   cursor: pointer;
+//   transition: all 0.2 ease-in-out;
+//   text-decoration: none;
 
-  &:hover {
-    transition: all 0.2 ease-in-out;
-    background: #01bf71;
-  }
-`;
+//   &:hover {
+//     transition: all 0.2 ease-in-out;
+//     background: #01bf71;
+//   }
+// `;

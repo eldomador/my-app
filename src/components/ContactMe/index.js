@@ -43,6 +43,7 @@ const ContactMe = () => {
         },
         (error) => {
           console.log(error.text);
+          toast.error("your email has not been sent!");
         }
       );
 
@@ -53,8 +54,8 @@ const ContactMe = () => {
   return (
     <>
       <Container>
+        <Icon to="/">Home</Icon>
         <FormWrap>
-          <Icon to="/">Home</Icon>
           <FormContent>
             <Form ref={form} onSubmit={sendEmail}>
               <FormH1>Contact Me</FormH1>
