@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import {
@@ -11,9 +11,16 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
+import { LangContext } from "../../App";
+import { useIntl } from "react-intl";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
+
+  const { state, dispatch } = useContext(LangContext);
+  const intl = useIntl()
+  const changeLanguage = (lang) =>
+    dispatch({ type: 'CHANGE_LANG', payload: lang });
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -100,6 +107,18 @@ const Navbar = ({ toggle }) => {
             <NavBtn>
               <NavBtnLink to="/contact-me">Contact Me</NavBtnLink>
             </NavBtn>
+            {state.lang === 'en' ?
+              <button onClick={() => changeLanguage('pl')}>
+                change lang pl
+              </button> :
+              <button onClick={() => changeLanguage('en')}>
+                change lang en
+              </button>}
+
+            <span style={{ color: 'white' }}>
+              {intl.formatMessage({ id: 'contact' })}
+            </span>
+
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
