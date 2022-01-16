@@ -10,6 +10,8 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
+  LengBtn,
+  NavLengBtn,
 } from "./NavbarElements";
 import { LangContext } from "../../App";
 import { useIntl } from "react-intl";
@@ -18,9 +20,9 @@ const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
   const { state, dispatch } = useContext(LangContext);
-  const intl = useIntl()
+  const intl = useIntl();
   const changeLanguage = (lang) =>
-    dispatch({ type: 'CHANGE_LANG', payload: lang });
+    dispatch({ type: "CHANGE_LANG", payload: lang });
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -39,6 +41,13 @@ const Navbar = ({ toggle }) => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
+            <NavLengBtn>
+              {state.lang === "en" ? (
+                <LengBtn onClick={() => changeLanguage("pl")}>Polski</LengBtn>
+              ) : (
+                <LengBtn onClick={() => changeLanguage("en")}>English</LengBtn>
+              )}
+            </NavLengBtn>{" "}
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
@@ -107,18 +116,6 @@ const Navbar = ({ toggle }) => {
             <NavBtn>
               <NavBtnLink to="/contact-me">Contact Me</NavBtnLink>
             </NavBtn>
-            {state.lang === 'en' ?
-              <button onClick={() => changeLanguage('pl')}>
-                change lang pl
-              </button> :
-              <button onClick={() => changeLanguage('en')}>
-                change lang en
-              </button>}
-
-            <span style={{ color: 'white' }}>
-              {intl.formatMessage({ id: 'contact' })}
-            </span>
-
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
