@@ -12,8 +12,10 @@ import {
   Button,
   HeroIcon,
 } from "./HeroElements";
+import { useIntl } from "react-intl";
 
 const HeroSection = () => {
+  const intl = useIntl();
   return (
     <HeroContainer id="home">
       <HeroBg>
@@ -21,11 +23,11 @@ const HeroSection = () => {
       </HeroBg>
       <HeroContent>
         <HeroIcon src={Profile} />
-        <HeroH1>Hi, I'm Jakub </HeroH1>
-        <HeroP>I'm Creative Front End Web Developer</HeroP>
+        <HeroH1>{intl.formatMessage({ id: "hi" })} </HeroH1>
+        <HeroP>{intl.formatMessage({ id: "heroText" })}</HeroP>
         <HeroBtnWrapper>
           <Button to="../../files/file.txt" target="_blank" download>
-            Download my CV
+            {intl.formatMessage({ id: "download" })}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
