@@ -9,6 +9,7 @@ import {
   homeObjTwo,
   homeObjThree,
 } from "../components/InfoSection/Data";
+
 import Services from "../components/Services";
 
 const Home = () => {

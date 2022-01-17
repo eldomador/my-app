@@ -1,4 +1,5 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import Icon1 from "../../images/undraw_breakfast.svg";
 import Icon2 from "../../images/undraw_project_completed.svg";
 import Icon3 from "../../images/undraw_weather.svg";
@@ -8,15 +9,15 @@ import {
   ServicesH1,
   ServicesH2,
   ServicesIcon,
-  ServicesLink,
   //ServicesP,
   ServicesWrapper,
 } from "./ServicesElements";
 
-const index = () => {
+const Services = () => {
+  const intl = useIntl();
   return (
     <ServicesContainer id="my-apps">
-      <ServicesH1>My Apps</ServicesH1>
+      <ServicesH1>{intl.formatMessage({ id: "apps" })}</ServicesH1>
       <ServicesWrapper>
         <ServicesCard
           href="https://randomrecipee.netlify.app/"
@@ -24,7 +25,7 @@ const index = () => {
           aria-label="Random recipe app"
         >
           <ServicesIcon src={Icon1} />
-          <ServicesH2> Random Meal App</ServicesH2>
+          <ServicesH2> {intl.formatMessage({ id: "app1" })}</ServicesH2>
           {/* <ServicesP>
             Are you feeling hungry? No idea for a meal? try my app.
           </ServicesP> */}
@@ -42,7 +43,7 @@ const index = () => {
           aria-label="Todo app"
         >
           <ServicesIcon src={Icon2} />
-          <ServicesH2> Todo App</ServicesH2>
+          <ServicesH2> {intl.formatMessage({ id: "app2" })}</ServicesH2>
         </ServicesCard>
         <ServicesCard
           href="https://weeeatherapp.netlify.app/"
@@ -50,11 +51,11 @@ const index = () => {
           aria-label="Weather app"
         >
           <ServicesIcon src={Icon3} />
-          <ServicesH2>Weather app</ServicesH2>
+          <ServicesH2>{intl.formatMessage({ id: "app3" })}</ServicesH2>
         </ServicesCard>
       </ServicesWrapper>
     </ServicesContainer>
   );
 };
 
-export default index;
+export default Services;

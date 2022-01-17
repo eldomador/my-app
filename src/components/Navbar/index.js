@@ -10,8 +10,8 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
-  LengBtn,
-  NavLengBtn,
+  PlBtn,
+  UkBtn,
 } from "./NavbarElements";
 import { LangContext } from "../../App";
 import { useIntl } from "react-intl";
@@ -40,14 +40,12 @@ const Navbar = ({ toggle }) => {
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
+          {state.lang === "en" ? (
+            <PlBtn onClick={() => changeLanguage("pl")}></PlBtn>
+          ) : (
+            <UkBtn onClick={() => changeLanguage("en")}></UkBtn>
+          )}
           <NavbarContainer>
-            <NavLengBtn>
-              {state.lang === "en" ? (
-                <LengBtn onClick={() => changeLanguage("pl")}>Polski</LengBtn>
-              ) : (
-                <LengBtn onClick={() => changeLanguage("en")}>English</LengBtn>
-              )}
-            </NavLengBtn>{" "}
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
@@ -73,7 +71,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  About
+                  {intl.formatMessage({ id: "aboutTitle" })}
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -85,7 +83,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  My Apps
+                  {intl.formatMessage({ id: "appsTitle" })}
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -97,7 +95,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Graphic Design
+                  {intl.formatMessage({ id: "graphicTitle" })}
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -109,12 +107,14 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Film Production
+                  {intl.formatMessage({ id: "videoTitle" })}
                 </NavLinks>
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/contact-me">Contact Me</NavBtnLink>
+              <NavBtnLink to="/contact-me">
+                {intl.formatMessage({ id: "contact" })}
+              </NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

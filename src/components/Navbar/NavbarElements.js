@@ -16,6 +16,11 @@ export const Nav = styled.nav`
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
+    font-size: 0.9rem;
+  }
+  @media screen and (max-width: 870px) {
+    transition: 0.8s all ease;
+    font-size: 0.65rem;
   }
 `;
 
@@ -101,28 +106,42 @@ export const NavBtnLink = styled(LinkR)`
   }
 `;
 
-export const NavLengBtn = styled.nav`
-  display: flex;
-  align-items: center;
-`;
-
-export const LengBtn = styled.button`
-  border-radius: 50px;
-  background: #01bf71;
+export const PlBtn = styled.button`
+  margin-left: 10px;
   white-space: nowrap;
-  height: 38px;
-  width: 125px;
-  color: #fff;
-  font-size: 16px;
+  border-radius: 2px;
+  width: 30px;
+  height: 20px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_the_United_Kingdom_%282-3%29.svg");
+  background-size: cover;
+  background-position: center;
   outline: none;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    transition: all 0.7s ease-in-out;
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1200px-Flag_of_Poland.svg.png");
+  }
+`;
+
+export const UkBtn = styled.button`
+  margin-left: 10px;
+  white-space: nowrap;
+  border-radius: 2px;
+  width: 30px;
+  height: 20px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1200px-Flag_of_Poland.svg.png");
+  background-size: cover;
+  background-position: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    transition: all 0.7s ease-in-out;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_the_United_Kingdom_%282-3%29.svg");
   }
 `;

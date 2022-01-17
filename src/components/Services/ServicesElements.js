@@ -88,23 +88,3 @@ export const ServicesP = styled.p`
   font-size: 1rem;
   text-align: center;
 `;
-
-// export const ServicesLink = styled.a`
-//   border-radius: 50px;
-//   background: #010606;
-//   white-space: nowrap;
-//   padding: 10px 64px;
-//   margin-top: 10px;
-//   color: #fff;
-//   font-size: 16px;
-//   outline: none;
-//   border: none;
-//   cursor: pointer;
-//   transition: all 0.2 ease-in-out;
-//   text-decoration: none;
-
-//   &:hover {
-//     transition: all 0.2 ease-in-out;
-//     background: #01bf71;
-//   }
-// `;
