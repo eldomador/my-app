@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ButtonElements";
+import { useIntl } from "react-intl";
 import {
   InfoContainer,
   InfoWrapper,
@@ -17,7 +18,7 @@ import {
   Player,
 } from "./infoElements";
 
-const index = ({
+const InfoSection = ({
   lightBg,
   id,
   imgStart,
@@ -34,6 +35,7 @@ const index = ({
   dark2,
   videoUrl,
 }) => {
+  const intl = useIntl();
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -41,9 +43,13 @@ const index = ({
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+                <TopLine>{intl.formatMessage({ id: topLine })} </TopLine>
+                <Heading lightText={lightText}>
+                  {intl.formatMessage({ id: headline })}
+                </Heading>
+                <Subtitle lightTextDesc={lightTextDesc}>
+                  {intl.formatMessage({ id: description })}
+                </Subtitle>
                 <BtnWrap>
                   <Button
                     to="contact-me"
@@ -56,7 +62,7 @@ const index = ({
                     dark={dark ? 1 : 0}
                     dark2={dark2 ? 1 : 0}
                   >
-                    {buttonLabel}
+                    {intl.formatMessage({ id: buttonLabel })}
                   </Button>
                 </BtnWrap>
               </TextWrapper>
@@ -79,4 +85,4 @@ const index = ({
   );
 };
 
-export default index;
+export default InfoSection;

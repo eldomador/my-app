@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useIntl } from "react-intl";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import {
@@ -24,6 +25,7 @@ import {
 } from "react-icons/fa";
 
 const ContactMe = () => {
+  const intl = useIntl();
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -58,10 +60,14 @@ const ContactMe = () => {
         <FormWrap>
           <FormContent>
             <Form ref={form} onSubmit={sendEmail}>
-              <FormH1>Contact Me</FormH1>
-              <FormLabel htmlFor="for">Your Email:</FormLabel>
+              <FormH1>{intl.formatMessage({ id: "contact" })}</FormH1>
+              <FormLabel htmlFor="for">
+                {intl.formatMessage({ id: "email" })}
+              </FormLabel>
               <FormInput id="email" type="email" name="email" required />
-              <FormLabel htmlFor="for">Your Message:</FormLabel>
+              <FormLabel htmlFor="for">
+                {intl.formatMessage({ id: "message" })}
+              </FormLabel>
               <TextArea
                 id="message"
                 rows="5"
@@ -70,9 +76,9 @@ const ContactMe = () => {
                 required
               />
               <FormButton type="submit" value="Send">
-                Send
+                {intl.formatMessage({ id: "send" })}
               </FormButton>
-              <Text>You can find me on:</Text>
+              <Text>{intl.formatMessage({ id: "socialText" })}</Text>
               <SocialIcons>
                 <SocialIconLink
                   href="https://www.linkedin.com/in/jakub-kosmalski-profil/"

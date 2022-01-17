@@ -1,4 +1,5 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import {
   SidebarContainer,
   Icon,
@@ -11,6 +12,7 @@ import {
 } from "./SidebarElements";
 
 function Sidebar({ isOpen, toggle }) {
+  const intl = useIntl();
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -22,21 +24,21 @@ function Sidebar({ isOpen, toggle }) {
             Home
           </SidebarLink>
           <SidebarLink to="about" onClick={toggle}>
-            About
+            {intl.formatMessage({ id: "aboutTitle" })}
           </SidebarLink>
           <SidebarLink to="my-apps" onClick={toggle}>
-            My Apps
+            {intl.formatMessage({ id: "appsTitle" })}
           </SidebarLink>
           <SidebarLink to="graphic-design" onClick={toggle}>
-            Graphic Design
+            {intl.formatMessage({ id: "graphicTitle" })}
           </SidebarLink>
           <SidebarLink to="film-production" onClick={toggle}>
-            Film Production
+            {intl.formatMessage({ id: "videoTitle" })}
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to="/contact-me" onClick={toggle}>
-            Contact Me
+             {intl.formatMessage({ id: "contact" })}
           </SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
