@@ -41,10 +41,11 @@ export const MobileIcon = styled.div`
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
+    margin-top: 6px;
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 28px;
     cursor: pointer;
     color: #fff;
   }
