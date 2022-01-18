@@ -10,8 +10,7 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
-  PlBtn,
-  UkBtn,
+  FlagBtn,
 } from "./NavbarElements";
 import { LangContext } from "../../App";
 import { useIntl } from "react-intl";
@@ -41,9 +40,9 @@ const Navbar = ({ toggle }) => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
           {state.lang === "en" ? (
-            <PlBtn onClick={() => changeLanguage("pl")}></PlBtn>
+            <FlagBtn img={"en"} onClick={() => changeLanguage("pl")}></FlagBtn>
           ) : (
-            <UkBtn onClick={() => changeLanguage("en")}></UkBtn>
+            <FlagBtn img={"pl"} onClick={() => changeLanguage("en")}></FlagBtn>
           )}
           <NavbarContainer>
             <MobileIcon onClick={toggle}>
