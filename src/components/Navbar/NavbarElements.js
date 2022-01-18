@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
-
+import PolandSvg from "../../images/Poland.svg";
+import UKSvg from "../../images/UK.svg";
 export const Nav = styled.nav`
   background: #010606;
   height: 80px;
@@ -106,33 +107,15 @@ export const NavBtnLink = styled(LinkR)`
   }
 `;
 
-export const PlBtn = styled.button`
+export const FlagBtn = styled.button`
   margin-left: 10px;
   white-space: nowrap;
   border-radius: 2px;
   width: 30px;
   height: 20px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_the_United_Kingdom_%282-3%29.svg");
-  background-size: cover;
-  background-position: center;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  &:hover {
-    transition: all 0.7s ease-in-out;
-    background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1200px-Flag_of_Poland.svg.png");
-  }
-`;
+  background: ${({ img }) =>
+    img === "en" ? `url(${UKSvg})` : `url(${PolandSvg})`};
 
-export const UkBtn = styled.button`
-  margin-left: 10px;
-  white-space: nowrap;
-  border-radius: 2px;
-  width: 30px;
-  height: 20px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1200px-Flag_of_Poland.svg.png");
   background-size: cover;
   background-position: center;
   outline: none;
@@ -141,7 +124,6 @@ export const UkBtn = styled.button`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   &:hover {
-    transition: all 0.7s ease-in-out;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_the_United_Kingdom_%282-3%29.svg");
+    transition: all 0.5s ease-in-out;
   }
 `;

@@ -57,7 +57,7 @@ export const messages = {
     graphicTopLine: "Grafika komputerowa",
     graphicHeadline: "Banery i loga",
     graphicDescription:
-      "Tworzę banery i logotypy dla klientów oraz przygotowuję je do druku. Potrafię również tworzyć grafiki w mediach społecznościowych",
+      "Tworzę banery i logotypy dla klientów oraz przygotowuję je do druku. Potrafię również tworzyć grafiki na media społecznościowe",
 
     videoTopLine: "Produkcja Filmowa",
     videoHeadline: "Tworzenie i edycia filmów",

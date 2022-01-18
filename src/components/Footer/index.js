@@ -1,5 +1,4 @@
 import React from "react";
-import { animateScroll as scroll } from "react-scroll";
 import { FaInstagram, FaLinkedin, FaYoutube, FaGithub } from "react-icons/fa";
 import { SiCodewars } from "react-icons/si";
 import {
@@ -22,7 +21,6 @@ const index = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <WebsiteRights>
-              {" "}
               Jakub Kosmalski © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
             <SocialIcons>
