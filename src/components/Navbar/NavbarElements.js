@@ -16,11 +16,9 @@ export const Nav = styled.nav`
   z-index: 10;
 
   @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
     font-size: 0.9rem;
   }
   @media screen and (max-width: 870px) {
-    transition: 0.8s all ease;
     font-size: 0.65rem;
   }
 `;
@@ -41,11 +39,12 @@ export const MobileIcon = styled.div`
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    margin-top: 6px;
+    margin-top: 7px;
+    margin-right: -12px;
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 28px;
+    font-size: 26px;
     cursor: pointer;
     color: #fff;
   }
@@ -109,7 +108,7 @@ export const NavBtnLink = styled(LinkR)`
 `;
 
 export const FlagBtn = styled.button`
-  margin-left: 10px;
+  margin-left: 15px;
   white-space: nowrap;
   border-radius: 2px;
   width: 30px;
