@@ -12,7 +12,7 @@ export const messages = {
     aboutTopLine: "About Me",
     aboutHeadline: "My introduction",
     aboutDescription:
-      "Web developer looking for growth opportunities after graduating with an IT degree. I'm a graphic and video creator.",
+      "I am looking to grow and gain experience as a frontend web developer. I am also into computer graphics and video creation.",
 
     apps: "My apps",
     app1: "Random recipe app",
@@ -40,13 +40,13 @@ export const messages = {
     graphicTitle: "Grafika komuterowa",
     videoTitle: "Produkcja filmowa",
     hi: "Witaj, jestem Jakub",
-    heroText: "Jestem Front End Web Developerem",
+    heroText: "jestem frontend web developerem",
     download: "Pobierz moje CV",
 
     aboutTopLine: "O mnie",
     aboutHeadline: "Wprowadzenie",
     aboutDescription:
-      "Jestem web developerem szukającym możliwości rozwoju po ukończeniu studiów informatycznych. Zajmuję się również grafiką komputerową i tworzeniem wideo.",
+      "Szukam możliwości rozwoju i zdobycia doświadczenia jako frontend web developer. Zajmuję się również grafiką komputerową i tworzeniem wideo.",
     buttonLabel: "Skontaktuj się ze mną",
 
     apps: "Moje aplikacje",

@@ -26,7 +26,7 @@ const HeroSection = () => {
         <HeroH1>{intl.formatMessage({ id: "hi" })} </HeroH1>
         <HeroP>{intl.formatMessage({ id: "heroText" })}</HeroP>
         <HeroBtnWrapper>
-          <Button to="../../files/file.txt" target="_blank" download>
+          <Button to="../../files/CV.pdf" target="_blank" download>
             {intl.formatMessage({ id: "download" })}
           </Button>
         </HeroBtnWrapper>
